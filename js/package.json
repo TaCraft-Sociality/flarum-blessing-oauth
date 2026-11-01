@@ -1,0 +1,19 @@
+{
+  "name": "@blessing/flarum-oauth-client",
+  "private": true,
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "format": "prettier --write src",
+    "format-check": "prettier --check src",
+    "check-typings": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "flarum-tsconfig": "^2.0.0",
+    "flarum-webpack-config": "^3.1.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^7.2.3"
+  }
+}

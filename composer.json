@@ -1,0 +1,37 @@
+{
+    "name": "tacraft-sociality/flarum-blessing-oauth",
+    "description": "Blessing Skin / TcsSkin OAuth2 login for Flarum 2.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "keywords": [
+        "flarum",
+        "oauth",
+        "oauth2",
+        "blessing-skin",
+        "tcsskin"
+    ],
+    "replace": {
+        "blessing/flarum-oauth-client": "*"
+    },
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0",
+        "league/oauth2-client": "^2.7"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Blessing Skin Login",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-tshirt",
+                "backgroundColor": "#6f42c1",
+                "color": "#fff"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Blessing\\Flarum\\": "src/"
+        }
+    }
+}

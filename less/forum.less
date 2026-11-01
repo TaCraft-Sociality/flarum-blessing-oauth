@@ -1,0 +1,90 @@
+// Link/unlink panel on the user security page.
+
+.BlessingOAuth-iconImage {
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.BlessingOAuth-Account {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--control-bg);
+  color: var(--control-color);
+  border-radius: @border-radius;
+
+  &-icon {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #6f42c1;
+    background-color: fade(#6f42c1, 12%);
+    border-radius: 50%;
+  }
+
+  &-logo {
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+
+    &.BlessingOAuth-iconImage {
+      object-fit: contain;
+      border-radius: 6px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+
+  &-status {
+    color: var(--muted-color);
+  }
+
+  &--linked &-status {
+    color: var(--alert-success-color);
+  }
+
+  &-meta {
+    margin-top: 4px;
+    font-size: 0.9em;
+    color: var(--muted-color);
+    word-break: break-all;
+  }
+
+  &-actions {
+    display: flex;
+    flex: none;
+    gap: 8px;
+    margin-left: auto;
+
+    .Button {
+      margin: 0;
+    }
+  }
+}
+
+.BlessingOAuth-Account-errors .Button {
+  margin-top: 8px;
+}
+
+@media @phone {
+  .BlessingOAuth-Account {
+    flex-wrap: wrap;
+
+    &-actions {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

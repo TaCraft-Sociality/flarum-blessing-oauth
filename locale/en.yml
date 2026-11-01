@@ -1,0 +1,57 @@
+blessing-oauth-client:
+  admin:
+    popup:
+      title: Blessing Skin Login
+      field:
+        base-url: Blessing Skin root URL
+        app-id: OAuth client ID
+        app-secret: OAuth client secret
+        provider-name: Display name
+        provider-name-help: Name shown in the Security settings link panel, e.g. "Blessing Skin" or another skin site. Leave empty to use "Blessing Skin".
+        button-title: Label for login button
+        button-title-placeholder: => blessing-oauth-client.api.login-button-title-placeholder
+        button-icon: Icon for login button
+        button-icon-image: Icon image URL (optional)
+        button-icon-image-help: If set (and no icon is uploaded), this image is shown instead of the Font Awesome icon. Leave empty to use the icon class above.
+        button-icon-upload: Upload an icon image
+        button-icon-upload-help: Upload a local PNG/JPEG/WebP image (max 2 MB). It is used instead of the URL and icon above.
+        message-help: Leave empty to use the default translation.
+        message-linked: Account linked (success message)
+        message-error: Generic login error
+        message-error-state: Invalid login state
+        message-error-provider: Authorization redirect failed
+        message-error-token: Access token request failed
+        message-error-userinfo: User profile request failed
+        message-error-identifier: Missing user identifier
+        verify-ssl: Verify the SSL certificate
+        verify-ssl-help: Only disable this when Blessing Skin uses a self-signed certificate. Disabling it lowers security.
+  api:
+    default-login-button-title: "Login with {provider}"
+    login-button-title-placeholder: Login with Blessing Skin
+    default-provider-name: Blessing Skin
+  forum:
+    linked: "Your {provider} account has been linked to your Flarum account."
+    link:
+      heading: "{provider} account"
+      name: "{provider}"
+      help: "Link your {provider} account so you can sign in with it, or remove an existing link."
+      status_linked: Linked
+      status_unlinked: Not linked
+      identifier: "Account ID: {identifier}"
+      linked_at: "Linked {time}"
+      bind_button: "Link {provider} account"
+      rebind_button: Use a different account
+      unbind_button: Remove link
+      unlink_confirm: "Are you sure you want to remove the link to your {provider} account? It will no longer be linked to this forum account; if the email addresses match, signing in with it again may link it automatically."
+      unlinked_success: "Your {provider} account has been unlinked."
+      unlink_failed: "Could not remove the {provider} link. Please try again."
+      load_failed: "Could not load your {provider} link status. Please try again."
+      retry: Try again
+    login-error: "Could not log in with {provider}. Please try again."
+    login-error-state: The login session expired or was opened in another tab. Please try again.
+    login-error-provider: "{provider} did not authorize the login."
+    login-error-token: "{provider} did not return an access token. Check the OAuth client ID/secret and the {provider} log."
+    login-error-userinfo: "{provider} did not return your profile."
+    login-error-identifier: "{provider} did not return a user ID."
+    login-error-already-linked: "This {provider} account is already linked to another user."
+    login-error-login-required: "Please log in before linking a {provider} account."

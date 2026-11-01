@@ -1,0 +1,57 @@
+blessing-oauth-client:
+  admin:
+    popup:
+      title: Blessing Skin 登录
+      field:
+        base-url: Blessing Skin 根 URL
+        app-id: OAuth 客户端 ID
+        app-secret: OAuth 客户端 Secret
+        provider-name: 站点名称
+        provider-name-help: 显示在「安全设置」绑定面板中的名称，例如「Blessing Skin」或「某某皮肤站」。留空则使用「Blessing Skin」。
+        button-title: 登录按钮的文本
+        button-title-placeholder: => blessing-oauth-client.api.login-button-title-placeholder
+        button-icon: 登录按钮的图标
+        button-icon-image: 图标图片地址（可选）
+        button-icon-image-help: 填写后（且未上传图标时）使用这张图片代替 Font Awesome 图标；留空则继续使用图标类名。
+        button-icon-upload: 上传图标图片
+        button-icon-upload-help: 上传本地 PNG/JPEG/WebP 图片（最大 2 MB），会优先于上面的 URL 和 Font Awesome 图标。
+        message-help: 留空则使用插件自带的中文翻译。
+        message-linked: 账号绑定成功提示
+        message-error: 通用登录失败提示
+        message-error-state: 登录状态失效提示
+        message-error-provider: 跳转授权失败提示
+        message-error-token: 获取访问令牌失败提示
+        message-error-userinfo: 获取用户信息失败提示
+        message-error-identifier: 缺少用户标识提示
+        verify-ssl: 校验 SSL 证书
+        verify-ssl-help: 仅当 Blessing Skin 使用自签名证书时才关闭；关闭后会降低安全性。
+  api:
+    default-login-button-title: "使用 {provider} 登录"
+    login-button-title-placeholder: 使用 Blessing Skin 登录
+    default-provider-name: Blessing Skin
+  forum:
+    linked: "你的 {provider} 账号已与当前 Flarum 账号绑定。"
+    link:
+      heading: "{provider} 账号"
+      name: "{provider}"
+      help: "绑定 {provider} 账号后即可使用它登录论坛；也可以在这里解除已有的绑定。"
+      status_linked: 已绑定
+      status_unlinked: 未绑定
+      identifier: "账号标识：{identifier}"
+      linked_at: "绑定于 {time}"
+      bind_button: "绑定 {provider} 账号"
+      rebind_button: 更换绑定的账号
+      unbind_button: 解除绑定
+      unlink_confirm: "确定要解除 {provider} 绑定吗？解除后该账号将不再直接关联到当前论坛账号；如果邮箱一致，下次使用它登录时可能会自动重新关联。"
+      unlinked_success: "已解除 {provider} 账号绑定。"
+      unlink_failed: "解除 {provider} 绑定失败，请重试。"
+      load_failed: "无法读取 {provider} 绑定状态，请重试。"
+      retry: 重试
+    login-error: "使用 {provider} 登录失败，请重试。"
+    login-error-state: 登录会话已过期或在其他标签页发起了登录，请重试。
+    login-error-provider: "{provider} 未授权本次登录。"
+    login-error-token: "获取访问令牌失败，请检查 OAuth 客户端 ID/Secret 和 {provider} 日志。"
+    login-error-userinfo: "获取 {provider} 用户信息失败。"
+    login-error-identifier: "{provider} 没有返回用户 ID。"
+    login-error-already-linked: "该 {provider} 账号已绑定到其他用户。"
+    login-error-login-required: "请先登录后再绑定 {provider} 账号。"
